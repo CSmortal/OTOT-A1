@@ -1,0 +1,18 @@
+version: '2.12'
+
+services:
+  node-app:
+    image: a1.3/node_app
+    build: ./app
+    ports:
+      - "3000:80"
+
+  rev-proxy:
+    image: a1.3/rev-proxy
+    build: ./nginx
+    ports:
+      - "80:80"
+  
+
+ 
+
